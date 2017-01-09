@@ -4,7 +4,7 @@ angular.module('lunchChecker',[])
 .controller('checkLunch', function ($scope){
   $scope.name="";
   $scope.textMessage = "";
-  $scope.textColor = "red";
+  $scope.textColor = "white";
 
   $scope.checkForTooMuch = function() {
     if($scope.name == ""){
