@@ -17,7 +17,8 @@ angular.module('lunchChecker',[])
     var str_array = $scope.name.split(',');
     var count=0;
     for(var i = 0; i < str_array.length; i++) {
-      if(str_array[i].length > 0) count++;
+      var val=str_array[i].replace(/^\s+|\s+$/g, '');//.trim() doesn't work in chrome.
+      if(val.length > 0) count++;
     }
     if(count > 3){
       $scope.textMessage = "Too much!";
