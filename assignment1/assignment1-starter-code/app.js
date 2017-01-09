@@ -4,12 +4,15 @@ angular.module('lunchChecker',[])
 .controller('checkLunch', function ($scope){
   $scope.name="";
   $scope.textMessage = "";
+  $scope.textColor = "red";
 
   $scope.checkForTooMuch = function() {
     if($scope.name == ""){
       $scope.textMessage = "Please enter data first";
+      $scope.textColor = "red";
       return;
     }
+    $scope.textColor = "green";
     // count number of items
     var str_array = $scope.name.split(',');
     var count=0;

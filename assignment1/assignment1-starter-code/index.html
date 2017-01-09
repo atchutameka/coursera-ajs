@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" ng-app="lunchChecker" ng-controller="checkLunch">
   <head>
     <title>Lunch Checker</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,11 +7,11 @@
     <script type="text/javascript" src="angular.min.js"></script>
     <script type="text/javascript" src="app.js"></script>
     <style>
-      .message { font-size: 1.3em; font-weight: bold; }
+      .message { font-size: 1.3em; font-weight: bold; color: {{textColor}};}
     </style>
   </head>
-<body ng-app="lunchChecker">
-   <div class="container" ng-controller="checkLunch">
+<body>
+   <div class="container">
      <h1>Lunch Checker</h1>
 
          <div class="form-group">
